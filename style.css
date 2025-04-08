@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1040px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.navbar {
+  background: #1a2e35;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-brand span {
+  font-size: 30px;
+}
+
+.navbar a:hover {
+  color: #007acc;
+}
+
+.slider_section .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section h2 {
+  color: #007acc;
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1a2e35;
+  font-size: 0.9rem;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+section:nth-child(odd),
+.card:nth-child(even) {
+  background-color: #1cbbb4;
+}
+
+section:nth-child(odd) h2 {
+  color: #ffffff;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 1rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.card h4 {
+  margin-bottom: 0.5rem;
+}
+
+.card button {
+  background: #ffffff;
+  color: #1a2e35;
+  border: none;
+  padding: 0.4rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card:nth-child(odd) button {
+  color: #ffffff;
+  background: #1a2e35;
+}
+
+.card .tech-stack {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.contact svg {
+  width: 30px;
+  height: 30px;
+  fill: #1a2e35;
+}
+
+.contact ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  list-style-type: none;
+}
+
+.certification_section {
+  background-color: #1cbbb4;
+  color: #ffffff;
+  text-align: center;
+}
+
+.certification_section .heading_container {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.certification_section .heading_container h2 {
+  border-bottom: 2px double #ffffff;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 16px 8px;
+}
+
+.certification_section .category_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.certification_section .category_container .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  min-width: 130px;
+  flex-basis: 26%;
+}
+
+.certification_section .category_container .box .img-box img {
+  width: 140px;
+  height: 140px;
+}
+
+.certification_section .category_container .box {
+  flex-basis: 34%;
+}
+
+@media (max-width: 576px) {
+  .certification_section .category_container {
+    justify-content: center;
+  }
+
+  .certification_section .category_container .box {
+    flex-basis: 52%;
+  }
+}
+
+.certification_section {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.certification_section .heading_container {
+  justify-content: center;
+}
+
+.certification_section .category_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.certification_section .category_container .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  min-width: 130px;
+  flex-basis: 26%;
+}
+
+@media (max-width: 767px) {
+  .img-box{
+  display: none;
+  }
+}
