@@ -33,7 +33,7 @@ body {
   padding: 1rem 5%;
 }
 
-.navbar ul {
+.nav-menu {
   list-style: none;
   display: flex;
   gap: 1.5rem;
@@ -90,13 +90,6 @@ footer p {
 
 a {
   text-decoration: none;
-}
-
-@media (max-width: 600px) {
-  .navbar ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
 }
 
 section:nth-child(even),
@@ -260,7 +253,7 @@ section:nth-child(even) h2 {
 }
 
 @media (max-width: 767px) {
-  .img-box {
+  .img-box.img-slider {
     display: none;
   }
 }
@@ -307,4 +300,86 @@ section:nth-child(even) h2 {
 .skill-item span {
   font-size: 0.9rem;
   text-align: center;
+}
+
+.hamburger {
+  display: none;
+}
+
+.close-btn {
+  display: none;
+}
+
+.detail-box.aos-init.aos-animate {
+  transition: all, opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: hsla(0, 0%, 10%, 0.5);
+    width: 60%;
+    height: 100%;
+    padding: 0 0 0 2rem;
+    backdrop-filter: blur(8px);
+    transition: right 0.4s;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+  }
+
+  .nav__close {
+    display: flex;
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+  }
+
+  .close-btn {
+    display: block;
+    float: right;
+    font-size: 30px;
+    text-align: right;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+
+  .navbar .navbar-brand span {
+    font-size: 24px;
+  }
+
+  .detail-box {
+    padding: 24px;
+  }
+
+  .detail-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .detail-box h2 {
+    font-size: 1rem;
+  }
+
+  .detail-box p {
+    font-size: 0.8rem;
+  }
+
+  #about {
+    padding-top: 0 !important;
+  }
 }
